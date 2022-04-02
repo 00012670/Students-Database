@@ -1,0 +1,124 @@
+<!-- include header -->
+<%- include('include/header') %>
+<!-- /include header -->
+
+<div class="new_user">
+
+    <form action="/update_student/<%= student[0]['_id'] %>" method="post">
+
+        <div class="container  mt-5">
+            <div class="row">
+
+                <!-- Name -->
+                <div class="col-sm-6">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Full Name</label>
+                        <input type="text" name="Student_name" value="<%= student[0]['Student_name'] %>" class="form-control" id="exampleFormControlInput1"
+                            placeholder="Full name">
+                    </div>
+                </div>
+                <!-- /Name -->
+
+                <!-- Email -->
+                <div class="col-sm-6">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email</label>
+                        <input type="email" name="Student_email" value="<%= student[0]['Student_email'] %>" class="form-control" id="exampleFormControlInput1"
+                            placeholder="@example.com">
+                    </div>
+                </div>
+                <!-- /Email -->
+
+
+                <!-- Levels -->
+                <div class="col-sm-6">
+                    <select class="form-select" name="Student_level" value="<%= student[0]['Student_level'] %>" aria-label="Default select example">
+                        <option selected>Levels</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </div>
+                <!-- /Levels -->
+
+                <!-- Courses -->
+                <div class="col-sm-6">
+                    <select class="form-select" name="Student_course" value="<%= student[0]['Student_course'] %>" aria-label="Default select example">
+                        <option selected>Courses</option>
+                        <option value="BIS">Business Information Systems</option>
+                        <option value="Fin">Finance</option>
+                        <option value="ECwF">Economics With Finance</option>
+                        <option value="BM">Business Management</option>
+                        <option value="CL">Commercial Law</option>
+                    </select>
+                </div>
+                <!-- /Courses -->
+
+                <!-- Gender -->
+                <div class="col-sm-6   mt-4">
+
+                    <div class="row">
+                        <div class="col">
+                            <h6 class="text-center">Gender</h6>
+                        </div>
+                        <div class="col">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="Student_gender" value="<%= student[0]['Student_gender'] %>" id="male"
+                                    value="Male">
+                                <label class="form-check-label" for="inlineRadio1">Male</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div>
+                                <input class="form-check-input" type="radio" name="Student_gender" value="<%= student[0]['Student_gender'] %>" id="female"
+                                    value="Female">
+                                <label class="form-check-label" for="inlineRadio2">Female</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Gender -->
+
+                <!-- Status -->
+                <div class="col-sm-6   mt-4">
+
+                    <div class="row">
+                        <div class="col">
+                            <h6 class="text-center">Status</h6>
+                        </div>
+                        <div class="col">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="Student_status" value="<%= student[0]['Student_status'] %>" id="active"
+                                    value="Active">
+                                <label class="form-check-label" for="inlineRadio1">Active</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div>
+                                <input class="form-check-input" type="radio" name="Student_status" value="<%= student[0]['Student_status'] %>" id="inactive"
+                                    value="Inactive">
+                                <label class="form-check-label" for="inlineRadio2">Inactive</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Status -->
+
+            </div>
+        </div>
+
+        <!-- Save Button -->
+        <div class="container mt-4">
+            <button type="submit" class="btn btn-outline-dark">Submit</button>
+        </div>
+        <!-- /Save Button -->
+
+    </form>
+</div>
+
+
+
+<!-- include footer -->
+<%- include('include/footer') %>
+<!-- /include footer -->
