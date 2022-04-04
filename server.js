@@ -7,7 +7,7 @@ const db = require("./helper/db");
 
 const app = express();
 
-const PORT = 8888;
+const PORT = 3000;
 
 app.use(bodyparser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");

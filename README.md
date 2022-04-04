@@ -1,23 +1,26 @@
 # Students-Database
 
 
-Description
+## Description
 
 The web application is designed to manage a database in which you can create, delete and update student data. To optimize the effectiveness of the application, additional functions have been added, such as sorting and searching.
 
-To create a new student, you should use the navigation bar and click on the "New Student" button. The form will appear on another creation page, which you need to fill out with all the necessary information and press "submit" button. The data about the new student will be saved on the homepage. There is a trash icon on the main page where you can delete student data. To update the extising information you need to press a pen icon. Searching fucntion was implemented by Name and sorting by Courses
+To create a new student, you should use the navigation bar and click on the "New Student" button. The form will appear on another creation page, which you need to fill out with all the necessary information and press "submit" button. The data about the new student will be saved on the homepage. 
+There is a trash icon on the main page where you can delete student data. To update the extising information you need to press a pen icon. 
+Searching fucntion was implemented by Name and sorting by Courses
 
 
+## Instructions on how to run the app locally 
 
 Before starting project, first you should install mongodb and npm packages
 
-```
+```bash
 npm install
 ```
 
 Then, to start project run following command 
 
-```
+```bash
 npm start
 ```
 
@@ -25,7 +28,7 @@ Open http://localhost:3000 to view it in the browser.
 
 
 
-Application dependencies’ list
+## Application dependencies’ list
 
 Express
 Ejs
@@ -35,7 +38,7 @@ Body-parser
 Dotenv
 
 
-Architecture of the project 
+## Architecture of the project 
 
 1. helper
     - db.js
@@ -56,7 +59,7 @@ Architecture of the project
 
 
 
-Links
+## Links
 
 github link -->
 https://github.com/00012670/Students-Database.git
