@@ -41,6 +41,7 @@ app.post("/create_student", (req, res) => {
       console.log("error is", err);
     }
   });
+  res.redirect("/");
 });
 
 // Delete a student by ID
@@ -52,21 +53,21 @@ app.get("/delete/:id", (req, res) => {
   });
 });
 
+//Update the student
 app.get("/update_student/:id", (req, res) => {
-  Student.find({}, (err, student) => {
-    Student.findOneAndUpdate(
-      { _id: req.params.id },
-      { $set: req.body },
-      (err, result) => {
-        if (!err) {
-          res.render("update", { student: student });
-          console.log("successfully edited");
-        } else {
-          console.log(err);
-        }
+  Student.findOneAndUpdate(
+    { _id: req.params.id },
+    { $set: req.body },
+    (err, result) => {
+      if (!err) {
+        console.log(result);
+        res.render("update", { student: result });
+        console.log("Successfully edited");
+      } else {
+        console.log(err);
       }
-    );
-  });
+    }
+  );
 });
 
 app.post("/update_student/:id", (req, res) => {
@@ -76,12 +77,55 @@ app.post("/update_student/:id", (req, res) => {
     (err, result) => {
       if (!err) {
         res.redirect("/");
-        console.log("successfully edited");
+        console.log("Successfully edited");
       } else {
         console.log(err);
       }
     }
   );
+});
+
+// Sorting methods by Courses
+app.get("/Business%20Information%20Systems", (req, res) => {
+  Student.find({ Student_course: "BIS" }, (err, student) => {
+    res.render("index", { student: student });
+  });
+});
+
+app.get("/Finance", (req, res) => {
+  Student.find({ Student_course: "Fin" }, (err, student) => {
+    res.render("index", { student: student });
+  });
+});
+
+app.get("/Economics%20With%20Finance", (req, res) => {
+  Student.find({ Student_course: "ECwF" }, (err, student) => {
+    res.render("index", { student: student });
+  });
+});
+
+app.get("/Business%20Management", (req, res) => {
+  Student.find({ Student_course: "BM" }, (err, student) => {
+    res.render("index", { student: student });
+  });
+});
+app.get("/Commercial%20Law", (req, res) => {
+  Student.find({ Student_course: "CL" }, (err, student) => {
+    res.render("index", { student: student });
+  });
+});
+
+// Search by Name
+app.get("/search", (req, res) => {
+  let name = req.query.find;
+
+  Student.find({ Student_name: name }, (err, student) => {
+    if (student.length == 0) {
+      res.render("notfound");
+    } else {
+      res.render("index", { student: student });
+    }
+  });
 });
 
 app.listen(PORT, () => {
