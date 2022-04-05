@@ -14,10 +14,6 @@ Searching fucntion was implemented by Name and sorting by Courses
 
 Before starting project, first you should install mongodb and npm packages
 
-hosted link --> 
-https://studentdatabasenodejs.herokuapp.com/
-
-
 ```bash
 npm install
 ```
@@ -27,7 +23,7 @@ Then, to start project run following command
 ```bash
 node server.js
 ```
-if you have nodemon package run following command
+If you have a nodemon package, run the next command
 
 ```bash
 nodemon server
@@ -35,6 +31,8 @@ nodemon server
 
 Open http://localhost:3000 to view it in the browser.
 
+hosted link --> 
+https://studentdatabasenodejs.herokuapp.com/
 
 
 ## Application dependencies’ list
@@ -65,7 +63,6 @@ Dotenv
 4. package-lock.json
 5. package.json
 6. server.js
-
 
 
 ## Links
