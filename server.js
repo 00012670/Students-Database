@@ -6,7 +6,7 @@ const Student = require("./helper/db");
 const app = express();
 dotenv.config();
 
-const PORT = proceed.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(bodyparser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
