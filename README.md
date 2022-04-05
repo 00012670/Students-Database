@@ -14,7 +14,7 @@ Searching fucntion was implemented by Name and sorting by Courses
 
 Before starting project, first you should install mongodb and npm packages
 
-hosted link
+hosted link 
 
 ```bash
 npm install
@@ -72,3 +72,4 @@ github link -->
 https://github.com/00012670/Students-Database.git
 
 hosted link -->
+https://studentdatabasenodejs.herokuapp.com/
