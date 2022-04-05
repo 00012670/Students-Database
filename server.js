@@ -1,13 +1,12 @@
 const express = require("express");
 const bodyparser = require("body-parser");
-const dotenv = require("dotenv");
+const dotenv = require("dotenv")
 const path = require("path");
 const Student = require("./helper/db");
-const db = require("./helper/db");
-
 const app = express();
+dotenv.config();
 
-const PORT = 3000;
+const PORT = proceed.env.PORT || 3000;
 
 app.use(bodyparser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
@@ -119,7 +118,7 @@ app.get("/Commercial%20Law", (req, res) => {
 app.get("/search", (req, res) => {
   let name = req.query.find;
 
-//Not found page/validation page
+  //Not found page/validation page
   Student.find({ Student_name: name }, (err, student) => {
     if (student.length == 0) {
       res.render("./include/notfound");

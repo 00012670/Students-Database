@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/Students");
+const MONGODB_URI = `mongodb+srv://00012670:9919813d@cluster0.vihzt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
+
+mongoose.connect(MONGODB_URI || "mongodb://localhost:27017/Students");
 
 const Student = mongoose.model("Students", {
   Student_name: String,
