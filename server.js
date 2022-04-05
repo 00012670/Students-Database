@@ -119,9 +119,10 @@ app.get("/Commercial%20Law", (req, res) => {
 app.get("/search", (req, res) => {
   let name = req.query.find;
 
+//Not found page/validation page
   Student.find({ Student_name: name }, (err, student) => {
     if (student.length == 0) {
-      res.render("notfound");
+      res.render("./include/notfound");
     } else {
       res.render("index", { student: student });
     }
