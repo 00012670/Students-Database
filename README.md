@@ -37,12 +37,18 @@ https://studentdatabasenodejs.herokuapp.com/
 
 ## Application dependencies’ list
 
-Express
-Ejs
-Nodemon
-Mongoose
-Body-parser
-Dotenv
+   "body-parser": "^1.19.2"
+    
+    "dotenv": "^16.0.0"
+
+    "ejs": "^3.1.6"
+
+    "express": "^4.17.3"
+
+    "mongodb": "^4.4.1"
+
+    "mongoose": "^6.2.4"
+
 
 
 ## Architecture of the project 
