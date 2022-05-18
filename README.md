@@ -37,7 +37,7 @@ https://studentdatabasenodejs.herokuapp.com/
 
 ## Application dependencies’ list
 
-   "body-parser": "^1.19.2"
+    "body-parser": "^1.19.2"
     
     "dotenv": "^16.0.0"
 
